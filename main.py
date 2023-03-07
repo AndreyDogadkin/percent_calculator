@@ -1,3 +1,7 @@
+from tkinter import *
+
+root = Tk()
+root.mainloop()
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
 user_money = ''
 
@@ -58,4 +62,4 @@ def restart_calc():
 
 
 percent_calc(user_money)
-
+root.mainloop()
