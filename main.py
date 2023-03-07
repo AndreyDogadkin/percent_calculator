@@ -1,7 +1,16 @@
 from tkinter import *
+window = Tk()
+window.title('Percent calculator')
+window.geometry('300x300')
 
-root = Tk()
-root.mainloop()
+label = Label(text='Введите сумму')
+e = Entry()
+b = Button(text='OK')
+
+label.pack()
+e.pack()
+b.pack()
+
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
 user_money = ''
 
@@ -60,6 +69,6 @@ def restart_calc():
     else:
         print('Досвидания!')
 
+window.mainloop()
 
 percent_calc(user_money)
-root.mainloop()
