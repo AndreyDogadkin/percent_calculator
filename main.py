@@ -54,7 +54,7 @@ def percent_calc(money=1):
 #         return ('')
 
 def all_banks(money):
-    out_list = ''
+    out_list = '\n'
     for b, p in per_cent.items():
         profit = round(float(p / 100 * money), 2)
         profit_year = round(float(profit * 12), 2)
@@ -79,12 +79,12 @@ def get_user_money():
     get_value = user_money.get()
     out_one_bank = percent_calc(get_value)
     all_banks_get = all_banks(get_value)
-    banks_info['text'] = out_one_bank, all_banks_get
+    banks_info['text'] = str(out_one_bank + all_banks_get)
 
 
 window = Tk()
 window.title('Percent calculator')
-window.geometry('500x500')
+window.geometry('700x300')
 
 user_money = IntVar(value=1)
 all_banks_get = StringVar()
