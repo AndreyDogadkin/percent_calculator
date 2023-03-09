@@ -73,7 +73,7 @@ def get_user_money():
         if get_value > 0:
             bank_info.pack()
             out_one_bank = percent_calc(get_value)
-            button_all_banks.pack()
+            button_all_banks.pack(pady=5)
             bank_info['text'] = str(out_one_bank)
         else:
             bank_info.pack()
@@ -98,7 +98,7 @@ def all_banks_get():
 
 window = Tk()
 window.title('Percent calculator')
-window.geometry('700x350')
+window.geometry('700x400')
 window['bg'] = '#01452c'
 
 user_money = IntVar()
@@ -116,10 +116,9 @@ button_all_banks = Button(command=all_banks_get, text='Все банки',
                           font='Consolas 20', bg='#01452c', fg='#01452c', relief='ridge',
                           width=7, height=1)
 
-label.pack()
+label.pack(pady=5)
 entry.pack()
-button_ok.pack()
-
+button_ok.pack(pady=10)
 window.mainloop()
 
 # percent_calc(user_money)
